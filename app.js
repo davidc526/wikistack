@@ -25,7 +25,7 @@ app.use('/user', userRouter)
 
 const PORT = 3000
 const init = async () => {
-    await models.db.sync({force: true})
+    await models.db.sync({force: false})
     // why didnt this work specifying the two models
     // await models.User.sync()
     // await models.Page.sync()
